@@ -1,0 +1,27 @@
+
+1) ask user what they want to do
+    - a) create an index & file
+    - b) to search 
+A--
+    1. pass directory to the document processor
+    2. write avl trees to a file 
+    3. tell user the file is complete
+B--
+    1. ask for a word
+    2. pass word to query processor 
+    3. query will split word if necessary 
+    4. ask index handler for words
+    5. find interesection or difference of document sets
+    6. calculate TF*IDF for each documents
+    7. order the results
+    8. display to user top 15 results 
+    9. ask user for the article they want to open
+    10. display corresponding text
+    11. output search engine statistics 
+
+    UML diagram
+A description of what each class does and what data structures it uses
+A short description of how the classes interact with each other to create an index and to perform a query.
+A timeline for implementing the different pieces with the projected completion date for each component.
+
+https://web.stanford.edu/class/archive/cs/cs106b/cs106b.1136/materials/cppdoc/Set-class.html
