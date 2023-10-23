@@ -1,0 +1,87 @@
+<mxfile host="65bd71144e">
+    <diagram id="M8jG8b7JbimdK5pG4rfh" name="Page-1">
+        <mxGraphModel dx="474" dy="870" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#FFFFFF" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="35" value="IndexHandler" style="swimlane;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="370" y="390" width="170" height="230" as="geometry">
+                        <mxRectangle x="210" y="40" width="110" height="23" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="13" value="- AVLTree terms&lt;br&gt;- AVLTree orgs&lt;br&gt;-AVLTree persons&lt;br&gt;&lt;br&gt;+insert term&lt;br&gt;+insert org&lt;br&gt;+insert person&lt;br&gt;+lookup term&lt;br&gt;+lookup org&amp;nbsp;&lt;br&gt;+lookup person&lt;br&gt;+write tree file&lt;br&gt;+populate tree" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="35">
+                    <mxGeometry y="20" width="170" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="AVL Node" style="swimlane;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="190" y="190" width="140" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="+ string&lt;br&gt;+ map&lt;br&gt;+AVL Node left*&lt;br&gt;+AVLNode right*&lt;br&gt;+ int height" style="whiteSpace=wrap;html=1;aspect=fixed;rounded=0;" vertex="1" parent="36">
+                    <mxGeometry y="20" width="140" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" style="edgeStyle=none;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;rounded=0;" edge="1" parent="36" source="36" target="9">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="AVL Tree - Index" style="swimlane;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="190" y="390" width="140" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="- AVLNode* root&lt;br&gt;- int count&amp;nbsp;&lt;br&gt;&lt;br&gt;+ functions already provided&amp;nbsp;&lt;br&gt;+ getCount" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="39">
+                    <mxGeometry y="20" width="140" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="40" target="42">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="QueryProcessor" style="swimlane;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="580" y="480" width="259" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="- string&lt;br&gt;- set &amp;lt;string&amp;gt; docs&lt;br&gt;&lt;span style=&quot;&quot;&gt;- indexhandler*&lt;br&gt;- map &amp;lt;unordered_maps&amp;lt;string&amp;gt;&amp;gt; results&lt;br&gt;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;+calculate TF*IDF&lt;/span&gt;&lt;span style=&quot;&quot;&gt;&lt;br&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;align=center;textDirection=ltr;labelPosition=center;verticalLabelPosition=middle;verticalAlign=middle;rounded=0;" vertex="1" parent="40">
+                    <mxGeometry y="20" width="259" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="DocParser" style="swimlane;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="370" y="190" width="170" height="140" as="geometry">
+                        <mxRectangle x="470" y="250" width="90" height="23" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="14" value="&lt;span&gt;- stopwords&lt;/span&gt;&lt;br&gt;&lt;div&gt;&lt;span&gt;- stemmer&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;- IndexHandler*&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;+ process_json&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=center;textDirection=ltr;rounded=0;" vertex="1" parent="41">
+                    <mxGeometry y="20" width="170" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="SearchEngine" style="swimlane;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="670" y="190" width="180" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="- DocParser&lt;br&gt;- QueryProcessor&lt;br&gt;- IndexHandler&lt;br&gt;&lt;br&gt;+index function&lt;br&gt;+search function" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=default;strokeColor=default;rounded=0;" vertex="1" parent="42">
+                    <mxGeometry y="20" width="180" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="9">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="260" y="390" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="46" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="11">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="360" y="470" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="51" value="" style="endArrow=classic;startArrow=classic;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="35" target="14">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="550" y="400" as="sourcePoint"/>
+                        <mxPoint x="660" y="340" as="targetPoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="53" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="14">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="665.0000000000002" y="270" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="54" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="13" target="10">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" value="" style="endArrow=classic;startArrow=classic;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="13" target="15">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="590" y="447" as="sourcePoint"/>
+                        <mxPoint x="640" y="397" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
